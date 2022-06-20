@@ -1,0 +1,23 @@
+{
+  "name": "pruebas-automatization",
+  "version": "1.0.0",
+  "description": "This is an educational repository for \"pruebas\" signature",
+  "main": "index.js",
+  "scripts": {
+    "open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Santiago-Restrepo/pruebas-automatization.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Santiago-Restrepo/pruebas-automatization/issues"
+  },
+  "homepage": "https://github.com/Santiago-Restrepo/pruebas-automatization#readme",
+  "dependencies": {
+    "cypress": "^10.1.0"
+  }
+}
