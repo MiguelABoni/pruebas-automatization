@@ -13,18 +13,18 @@ class cartPage {
     verificateInformation = (selectedValues) => {
         // Validamos la información del computador
         cy.get(this.attributes).then((div_element) => {
-            const cartInformation = div_element[0].textContent;
+            const text = div_element[0].textContent;
             //Validamos el procesador
-            expect(cartInformation, 'Se esperaba el procesador seleccionado y aparece otro diferente').to.include(selectedValues[0].processor);
+            expect(text, 'Se esperaba el procesador seleccionado y aparece otro diferente').to.include(selectedValues[0].processor);
             //Validamos la RAM
-            expect(cartInformation, 'Se esperaba la RAM seleccionada y aparece otra diferente').to.include(selectedValues[0].RAM);
+            expect(text, 'Se esperaba la RAM seleccionada y aparece otra diferente').to.include(selectedValues[0].RAM);
             //Validamos el disco duro
-            expect(cartInformation, 'Se esperaba el HDD seleccionado y aparece otro diferente').to.include(selectedValues[0].HDD);
+            expect(text, 'Se esperaba el HDD seleccionado y aparece otro diferente').to.include(selectedValues[0].HDD);
             //Validamos el sistema operativo
-            expect(cartInformation, 'Se esperaba el OS seleccionado y aparece otro diferente').to.include(selectedValues[0].OS);
+            expect(text, 'Se esperaba el OS seleccionado y aparece otro diferente').to.include(selectedValues[0].OS);
             //Validamos cada software ingresado
             selectedValues[0].software.forEach(software => {
-                expect(cartInformation, 'Se esperaba el Software seleccionado y aparece otro diferente').to.include(software);
+                expect(text, 'Se esperaba el Software seleccionado y aparece otro diferente').to.include(software);
             });
         });
 
@@ -33,7 +33,7 @@ class cartPage {
         selectedValues.forEach((selectedValue, index) => {
             cy.get(this.price).then((span) => {
                 const price = span[index].textContent;
-                expect(price, 'Se esperaba un precio y aparece un precio diferente del articulo').to.include(selectedValue.price);
+                expect(price, 'Se esperaba un precio y aparece un precio diferente del articulo').to.equal(selectedValue.price);
             });
         })
 
@@ -49,7 +49,6 @@ class cartPage {
             });
         });
     }
-
     //Verificamos que el nombre de la cámara sea igual al que se había añadido al carrito
     verificateCameraName = (selectedValues) => {
         cy.get(this.productNames).then((productName) => {

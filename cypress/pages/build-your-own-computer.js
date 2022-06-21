@@ -68,15 +68,22 @@ class buildYourOwnComputerPage {
             SelectedValues.quantity = quantityHTML[0].value
         });
 
+        
+        // Click al boton del carrito de compras
+        cy.get(this.AddToCard).click();
+
+        // Esperar a la actualización del precio
+        cy.wait(3000);
+
         // Agregar Precio
         cy.get(this.price).then((priceHTML) => {
+            console.log(priceHTML[0].textContent);
             SelectedValues.price = priceHTML[0].textContent;
         });
 
-        // Click al boton del carrito de compras
-        cy.get(this.AddToCard).click();
         // Verificar mensaje
         cy.get(this.success).should('be.visible');
+        
         // Cerrar modal
         cy.get(this.successClose).click();
 
