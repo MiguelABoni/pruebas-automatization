@@ -31,4 +31,15 @@
 7. Seleccionar el archivo "index.cy.js" que contiene todas las pruebas
 ![Seleccionar el archivo index.cy.js](https://i.postimg.cc/BQ9QM6jL/Paso3-Select-index.png)
 8. Esperar que todas las pruebas se ejecuten para mirar el resultado ✅
+![Resultado de los test](https://i.postimg.cc/pXLx0F2d/Paso4-Test-Completed.png)
 
+## ⚠ Advertencia ⚠
+> En ocasiones la aplicación presenta problemas en el envío de peticiones POST o en la simulación del evento "hover" (algo fuera de nuestras posibilidades) por lo cual en caso de fallar es requerido volver a ejecutar las pruebas para un correcto funcionamiento:
+- Presionando la tecla "R"
+- Dar click en el botón de recargar 👇
+![Botón para volver a ejecutar las pruebas](https://i.postimg.cc/Pf605Fjt/Paso-Extra-Reload-Test.png)
+
+## Integrantes:
+- [Santiago Restrepo Idárraga](https://github.com/Santiago-Restrepo "Santiago Restrepo Idárraga")
+- [Miguel Ángel Bedoya Bonilla](https://github.com/MiguelABoni "Miguel Ángel Bedoya Bonilla")
+- [Juan Esteban Galvis](https://github.com/JuanesGalvis "Juan Esteban Galvis")
