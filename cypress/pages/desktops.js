@@ -1,11 +1,11 @@
 class desktopsPage {
     constructor() {
-        this.addCartButton = '.button-2 product-box-add-to-cart-button';
+        this.addCartButtonComputer = '.button-2.product-box-add-to-cart-button';
     }
 
+    /** Se clickea el botón para añadir el computador seleccionado */
     clickCartButton = () => {
-        cy.get(this.addCartButton).click();
+        cy.get('.button-2.product-box-add-to-cart-button').first().click();
     }
 }
-
 export default new desktopsPage();

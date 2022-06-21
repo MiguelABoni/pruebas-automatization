@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Santiago-Restrepo/pruebas-automatization#readme",
   "dependencies": {
     "cypress": "^10.1.0"
+  },
+  "devDependencies": {
+    "cypress-real-events": "^1.7.0"
   }
 }
